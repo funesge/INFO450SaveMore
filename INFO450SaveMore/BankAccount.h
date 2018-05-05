@@ -11,7 +11,7 @@ protected:
 	double interestRate;
 	double accountBalance;
 public:
-	//default constructor for Bank Account
+	//constructor for Bank Account
 	BankAccount(int acctNumber, double acctBalance);	
 	// virtual function because some accounts require redefining
 	virtual int withdrawFunds(double withdrawAmount);

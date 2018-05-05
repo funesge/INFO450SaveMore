@@ -13,7 +13,7 @@ private:
 	const double SECONDAPR = 0.02;
 	const double WITHDRAWFEE = 2.00;
 public:
-	//default constructor for Savings
+	//constructor for Savings
 	SavingsAccount(int acctNumber, double acctBalance);
 	//override withdraw function because of withdraw fees
 	int withdrawFunds(double withdrawAmount);

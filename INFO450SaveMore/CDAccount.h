@@ -13,7 +13,7 @@ private:
 	const double LESSERRATE = 0.05;
 	int term;
 public:
-	//default constructor for CDAccount
+	//constructor for CDAccount
 	CDAccount(int acctNumber, double acctBalance, int term);
 	void assessInterest();
 	
