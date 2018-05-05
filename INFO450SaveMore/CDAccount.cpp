@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-CDAccount::CDAccount(int term, int acctNumber, double acctBalance) :BankAccount(accountNumber, accountBalance)
+CDAccount::CDAccount(int acctNumber, double acctBalance, int term) :BankAccount(acctNumber, acctBalance)
 {
 	if (term < 5)
 	{
@@ -13,6 +13,7 @@ CDAccount::CDAccount(int term, int acctNumber, double acctBalance) :BankAccount(
 	{
 		interestRate = FIVEYEARRATE;
 	}
+	assessInterest();
 }
 
 void CDAccount::assessInterest()

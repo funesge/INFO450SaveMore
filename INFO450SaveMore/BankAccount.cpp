@@ -36,6 +36,18 @@ int BankAccount::deposit(double depositAmount)
 	}
 }
 
+//no body as only checking account will require
+int BankAccount::orderCheck()
+{
+	return 0;
+}
+
+//no body as only savings and certificates will require
+void BankAccount::assessInterest()
+{
+	
+}
+
 void BankAccount::displayAccountInfo()
 {
 	cout << "Account Number: " << accountNumber << endl;

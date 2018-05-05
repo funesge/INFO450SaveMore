@@ -16,6 +16,10 @@ public:
 	// virtual function because some accounts require redefining
 	virtual int withdrawFunds(double withdrawAmount);
 	virtual int deposit(double depositAmount);
+	//virtual function needed by checking account
+	virtual int orderCheck();
+	//function needed by savings and certificate
+	virtual void assessInterest();
 	void displayAccountInfo();
 	
 };

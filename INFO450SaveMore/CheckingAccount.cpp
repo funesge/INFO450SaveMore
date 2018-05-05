@@ -5,7 +5,7 @@
 
 CheckingAccount::CheckingAccount(int acctNumber, double acctBalance) :BankAccount(acctNumber, acctBalance)
 {
-
+	interestRate = 0;
 }
 
 //function checks if withdrawal is possible and for low balance
