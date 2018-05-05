@@ -18,5 +18,4 @@ public:
 	//function will be used to order checks
 	int orderCheck();
 	//this function will be used to check whether a balance is low
-	void checkBalance();
 };

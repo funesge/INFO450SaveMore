@@ -5,6 +5,7 @@
 
 CheckingAccount::CheckingAccount(int acctNumber, double acctBalance) :BankAccount(acctNumber, acctBalance)
 {
+	//no interest rate for checking accounts
 	interestRate = 0;
 }
 
@@ -19,7 +20,10 @@ int CheckingAccount::withdrawFunds(double withdrawAmount)
 	{
 		accountBalance -= withdrawAmount;
 		//uses checkBlance function to assess if fee needed
-		checkBalance();
+		if (accountBalance < 500)
+		{
+			accountBalance -= LOWBALANCEFEE;
+		}
 		return 0;
 
 	}
@@ -30,20 +34,15 @@ int CheckingAccount::orderCheck()
 	if (accountBalance > ORDERCHECKFEE)
 	{
 		accountBalance -= ORDERCHECKFEE;
-		//uses checkBlance function to assess if fee needed
-		checkBalance();
+		//assess if low balance fee needed
+		if (accountBalance < 500)
+		{
+			accountBalance -= LOWBALANCEFEE;
+		}
 		return 0;
 	}
 	else if (accountBalance < ORDERCHECKFEE)
 	{
 		return -1;
-	}
-}
-
-void CheckingAccount::checkBalance()
-{
-	if (accountBalance < 500)
-	{
-		accountBalance -= LOWBALANCEFEE;
 	}
 }
