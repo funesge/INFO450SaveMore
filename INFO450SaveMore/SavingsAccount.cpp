@@ -26,11 +26,18 @@ int SavingsAccount::withdrawFunds(double withdrawAmount)
 	}
 }
 
-void SavingsAccount::deposit(double depositAmount)
+int SavingsAccount::deposit(double depositAmount)
 {
-	accountBalance += depositAmount;
-	//check interest rate after deposit
-	assessInterest();
+	if (depositAmount >= 0)
+	{
+		accountBalance += depositAmount;
+		//check interest rate after deposit
+		assessInterest();
+	}
+	else if (depositAmount < 0)
+	{
+		return -1;
+	}
 }
 
 void SavingsAccount::assessInterest()

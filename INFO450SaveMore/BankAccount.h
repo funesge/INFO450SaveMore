@@ -15,7 +15,7 @@ public:
 	BankAccount(int acctNumber, double acctBalance);	
 	// virtual function because some accounts require redefining
 	virtual int withdrawFunds(double withdrawAmount);
-	void deposit(double depositAmount);
+	virtual int deposit(double depositAmount);
 	void displayAccountInfo();
 	
 };

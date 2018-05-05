@@ -18,7 +18,7 @@ public:
 	//override withdraw function because of withdraw fees
 	int withdrawFunds(double withdrawAmount);
 	// Override deposit to assess interest
-	void deposit(double depositAmount);
+	int deposit(double depositAmount);
 	void assessInterest();
 
 
