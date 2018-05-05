@@ -16,7 +16,6 @@ public:
 	//default constructor for CDAccount
 	CDAccount(int acctNumber, double acctBalance, int term);
 	void assessInterest();
-	//override display function from base class due to error
 	
 
 
