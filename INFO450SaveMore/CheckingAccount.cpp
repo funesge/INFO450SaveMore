@@ -19,7 +19,7 @@ int CheckingAccount::withdrawFunds(double withdrawAmount)
 	else if ((accountBalance - withdrawAmount) > 0)
 	{
 		accountBalance -= withdrawAmount;
-		//uses checkBlance function to assess if fee needed
+		//asses if low balance fee needed
 		if (accountBalance < 500)
 		{
 			accountBalance -= LOWBALANCEFEE;
