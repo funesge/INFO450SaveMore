@@ -15,7 +15,9 @@ private:
 public:
 	//default constructor for Savings
 	SavingsAccount(int acctNumber, double acctBalance);
+	//override withdraw function because of withdraw fees
 	int withdrawFunds(double withdrawAmount);
+	// Override deposit to assess interest
 	void deposit(double depositAmount);
 	void assessInterest();
 
